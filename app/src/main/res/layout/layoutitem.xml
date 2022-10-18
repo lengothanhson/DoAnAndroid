@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginRight="15dp">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="start"
+        android:maxLines="1"
+        android:lines="1"
+        android:ellipsize="marquee"/>
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20sp"
+        android:textColor="#C5C5C5"
+        android:layout_gravity="start"
+        android:maxLines="1"
+        android:lines="1"
+        android:ellipsize="marquee"/>
+
+</LinearLayout>
