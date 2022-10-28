@@ -16,7 +16,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="60dp"
         android:background="@android:color/white"
-        android:hint="Bạn muốn nghe gì ?"
+        android:hint="@string/banmunnghegi"
         android:drawableStart="@drawable/ic_baseline_search_24"/>
 
     <androidx.recyclerview.widget.RecyclerView

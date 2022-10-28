@@ -2,4 +2,9 @@
     <string name="app_name">DoAn</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- text fragment chart -->
+    <string name="banmunnghegi">Bạn muốn nghe gì ?</string>
+
+    <!-- text fragment chart -->
+    <string name="content">Nội Dung</string>
 </resources>

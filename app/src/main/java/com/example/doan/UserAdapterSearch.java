@@ -26,9 +26,7 @@ public class UserAdapterSearch extends RecyclerView.Adapter<UserAdapterSearch.Us
     public UserGridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-
         View userView = inflater.inflate(R.layout.layoutitemsearch, parent, false);
-
         UserGridViewHolder viewHolder = new UserGridViewHolder(userView);
         return viewHolder;
     }
@@ -36,7 +34,6 @@ public class UserAdapterSearch extends RecyclerView.Adapter<UserAdapterSearch.Us
     @Override
     public void onBindViewHolder(@NonNull UserGridViewHolder holder, int position) {
         User item = lstUser.get(position);
-
         holder.imAvatar.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
         holder.tvTypeC.setText(item.getName());
     }

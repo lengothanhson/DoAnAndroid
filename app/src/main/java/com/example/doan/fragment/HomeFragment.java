@@ -29,18 +29,15 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     ArrayList<User> lstUser;
     UserAdapter userAdapter;
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     private RecyclerView rvListC;
     private RecyclerView rvListKhamPhaBHC;
-
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -70,51 +67,39 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         LoadData();
-
         rvListC = view.findViewById(R.id.rvListKP);
         rvListC.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL,false));
         rvListC.setHasFixedSize(true);
         UserAdapter userAdapter = new UserAdapter(lstUser, new UserAdapter.onitemclick() {
             @Override
             public void onItemClick(User user) {
-
             }
         });
         rvListC.setAdapter(userAdapter);
         userAdapter.notifyDataSetChanged();
-
         LoadData1();
-
         rvListKhamPhaBHC = view.findViewById(R.id.rvListKhamPhaBH);
         rvListKhamPhaBHC.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL,false));
         rvListKhamPhaBHC.setHasFixedSize(true);
         UserAdapter1 userAdapter1 = new UserAdapter1(lstUser, new UserAdapter1.onitemclick() {
             @Override
             public void onItemClick(User user) {
-
             }
         });
         rvListKhamPhaBHC.setAdapter(userAdapter1);
         userAdapter1.notifyDataSetChanged();
     }
-
     void LoadData() {
         lstUser = new ArrayList<>();
         lstUser.add(new User("1","người lớn chơi trung thu","Giang ơi Radio","podcast_giangoi.png"));
@@ -123,7 +108,6 @@ public class HomeFragment extends Fragment {
         lstUser.add(new User("4","Đừng chỉ nghĩ về lí do bắt đầu trước khi bỏ cuộc","Nguyễn Hữu Trí podcast","podcast_nguyenhuutri.png"));
         lstUser.add(new User("5","Học gì để có công việc tốt","The Present Writer","podcast_thepresentwriter.png"));
     }
-
     void LoadData1() {
         lstUser = new ArrayList<>();
         lstUser.add(new User("1", "2 things", "Don Diablo", "2things_diablo.png"));

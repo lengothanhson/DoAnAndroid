@@ -18,7 +18,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         private final UserAdapter.onitemclick onitemclick;
         ArrayList<User> lstUser;
         Context context;
-        UserGridCallBack userGridCallBack;
+     UserGridCallBack userGridCallBack;
 
         public interface onitemclick{
             void onItemClick(User user);
@@ -35,9 +35,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             context = parent.getContext();
             LayoutInflater inflater = LayoutInflater.from(context);
-
             View userView = inflater.inflate(R.layout.layoutitem, parent, false);
-
             UserViewHolder viewHolder = new UserViewHolder(userView);
             return viewHolder;
         }
@@ -45,7 +43,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         @Override
         public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
             User item = lstUser.get(position);
-
             holder.imAvatar.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
             holder.tvNameC.setText(item.getName());
             holder.tvAuthorC.setText(item.getAuthor());
@@ -56,27 +53,24 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                 }
             });
         }
-
         @Override
         public int getItemCount() {
             return lstUser.size();
         }
-
         static class UserViewHolder extends RecyclerView.ViewHolder {
             ImageView imAvatar;
             TextView tvNameC;
             TextView tvAuthorC;
             LinearLayout linearLayout;
             public UserViewHolder(@NonNull View itemView) {
-                super(itemView);
+                 super(itemView);
                 imAvatar  = itemView.findViewById(R.id.ivAvatar);
                 tvNameC = itemView.findViewById(R.id.tvName);
                 tvAuthorC = itemView.findViewById(R.id.tvAuthor);
                 linearLayout = itemView.findViewById(R.id.btItem);
             }
         }
-
-        public interface UserGridCallBack {
-            void onItemClick(String id);
+     public interface UserGridCallBack {
+          void onItemClick(String id);
         }
 }
