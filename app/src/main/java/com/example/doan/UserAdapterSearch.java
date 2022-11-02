@@ -12,27 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class UserAdapterSearch extends RecyclerView.Adapter<UserAdapterSearch.UserGridViewHolder> {
-    ArrayList<User> lstUser;
+public class UserAdapterSearch extends RecyclerView.Adapter<UserAdapterSearch.UserViewHolder>  {
     Context context;
-//    UserAdapter.UserGridCallBack userGridCallBack;
-
-    public UserAdapterSearch(ArrayList<User> lstUser) {
-        this.lstUser = lstUser;
-    }
-
+    ArrayList<User> lstUser;
     @NonNull
     @Override
-    public UserGridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View userView = inflater.inflate(R.layout.layoutitemsearch, parent, false);
-        UserGridViewHolder viewHolder = new UserGridViewHolder(userView);
+        UserViewHolder viewHolder = new UserViewHolder(userView);
         return viewHolder;
     }
-
+    public UserAdapterSearch(ArrayList<User> lstUser) {
+        this.lstUser = lstUser;
+    }
     @Override
-    public void onBindViewHolder(@NonNull UserGridViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         User item = lstUser.get(position);
         holder.imAvatar.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
         holder.tvTypeC.setText(item.getName());
@@ -43,13 +39,52 @@ public class UserAdapterSearch extends RecyclerView.Adapter<UserAdapterSearch.Us
         return lstUser.size();
     }
 
-    class UserGridViewHolder extends RecyclerView.ViewHolder {
-        ImageView imAvatar;
-        TextView tvTypeC;
-        public UserGridViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imAvatar  = itemView.findViewById(R.id.ivsearch);
-            tvTypeC = itemView.findViewById(R.id.tvType);
-        }
-    }
+    class UserViewHolder extends RecyclerView.ViewHolder{
+     ImageView imAvatar;
+     TextView tvTypeC;
+     public UserViewHolder(@NonNull View itemView) {
+         super(itemView);
+         imAvatar  = itemView.findViewById(R.id.ivsearch);
+         tvTypeC = itemView.findViewById(R.id.tvType);
+     }
+ }
+    //    ArrayList<User> lstUser;
+//    Context context;
+////    UserAdapter.UserGridCallBack userGridCallBack;
+//
+//    public UserAdapterSearch(ArrayList<User> lstUser) {
+//        this.lstUser = lstUser;
+//    }
+//
+//    @NonNull
+//    @Override
+//    public UserGridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        context = parent.getContext();
+//        LayoutInflater inflater = LayoutInflater.from(context);
+//        View userView = inflater.inflate(R.layout.layoutitemsearch, parent, false);
+//        UserGridViewHolder viewHolder = new UserGridViewHolder(userView);
+//        return viewHolder;
+//    }
+//
+//    @Override
+//    public void onBindViewHolder(@NonNull UserGridViewHolder holder, int position) {
+//        User item = lstUser.get(position);
+//        holder.imAvatar.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
+//        holder.tvTypeC.setText(item.getName());
+//    }
+//
+//    @Override
+//    public int getItemCount() {
+//        return lstUser.size();
+//    }
+//
+//    class UserGridViewHolder extends RecyclerView.ViewHolder {
+//        ImageView imAvatar;
+//        TextView tvTypeC;
+//        public UserGridViewHolder(@NonNull View itemView) {
+//            super(itemView);
+//            imAvatar  = itemView.findViewById(R.id.ivsearch);
+//            tvTypeC = itemView.findViewById(R.id.tvType);
+//        }
+//    }
 }

@@ -46,8 +46,8 @@ BottomNavigationView mnBottom;
                     case R.id.mnSearch:
                         LoadFragment(new SearchFragment());
                         return true;
-                    case R.id.mnChart:
-                        LoadFragment(new ChartFragment());
+                    case R.id.AbovechartFragment:
+                        LoadFragment(new AbovechartFragment());
                         return true;
                     case R.id.mnLibrary:
                         LoadFragment(new LibraryFragment());

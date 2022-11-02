@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -85,6 +86,9 @@ public class ChartFragment extends Fragment {
             public void onItemClick(User user) {
             }
         });
+//        StaggeredGridLayoutManager gridLayoutManager =
+//                new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+//        rvListC.setLayoutManager(gridLayoutManager);
       rvListC.setAdapter(userAdapterChart);
        userAdapterChart.notifyDataSetChanged();
     }
