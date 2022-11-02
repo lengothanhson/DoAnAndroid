@@ -8,15 +8,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.doan.R;
-import com.example.doan.User;
-import com.example.doan.UserAdapter;
-import com.example.doan.UserAdapterSearch;
+import com.example.doan.users.User;
+import com.example.doan.adapter.UserAdapterSearch;
 
 import java.util.ArrayList;
 
@@ -82,13 +82,20 @@ public class SearchFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         LoadData();
-
         rvSearchListC = view.findViewById(R.id.rvSearchList);
-        rvSearchListC.setLayoutManager(new GridLayoutManager(getContext(),2));
-        rvSearchListC.setHasFixedSize(true);
+        rvSearchListC.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
+      //  rvSearchListC.setHasFixedSize(true);
         UserAdapterSearch userAdapterSearch = new UserAdapterSearch(lstUser);
+
+        StaggeredGridLayoutManager gridLayoutManager =
+             new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        GridLayoutManager gridLayoutManager1= new GridLayoutManager(getContext(),2);
+        gridLayoutManager1.setOrientation(LinearLayoutManager.VERTICAL);
+        rvSearchListC.setLayoutManager(gridLayoutManager1);
+       //  LinearLayoutManager linearLayoutManager= new LinearLayoutManager(getContext());
+
         rvSearchListC.setAdapter(userAdapterSearch);
-//        userAdapterSearch.notifyDataSetChanged();
+ //     userAdapterSearch.notifyDataSetChanged();
     }
 
     void LoadData() {
@@ -99,5 +106,8 @@ public class SearchFragment extends Fragment {
             lstUser.add(new User("4","Nhạc Việt","","vpopkhongthethieu.png"));
             lstUser.add(new User("5","Pop","","tophitoday.png"));
             lstUser.add(new User("6","Kpop","","tuyentapnhackpop.png"));
+        lstUser.add(new User("7","Nhạc Việt","","vpopkhongthethieu.png"));
+        lstUser.add(new User("8","Pop","","tophitoday.png"));
+        lstUser.add(new User("9","Kpop","","tuyentapnhackpop.png"));
     }
 }

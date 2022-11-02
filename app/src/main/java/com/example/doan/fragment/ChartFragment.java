@@ -13,9 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.doan.R;
-import com.example.doan.User;
-import com.example.doan.UserAdapter;
-import com.example.doan.UserAdapterChart;
+import com.example.doan.users.User;
+import com.example.doan.adapter.UserAdapter;
+import com.example.doan.adapter.UserAdapterChart;
 
 import java.util.ArrayList;
 
@@ -85,6 +85,9 @@ public class ChartFragment extends Fragment {
             public void onItemClick(User user) {
             }
         });
+//        StaggeredGridLayoutManager gridLayoutManager =
+//                new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+//        rvListC.setLayoutManager(gridLayoutManager);
       rvListC.setAdapter(userAdapterChart);
        userAdapterChart.notifyDataSetChanged();
     }
