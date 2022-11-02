@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.utils;
 
 import android.content.Context;
 import android.content.res.AssetManager;

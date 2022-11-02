@@ -7,16 +7,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.doan.R;
-import com.example.doan.User;
-import com.example.doan.UserAdapter;
-import com.example.doan.UserAdapterChart;
+import com.example.doan.users.User;
+import com.example.doan.adapter.UserAdapter;
+import com.example.doan.adapter.UserAdapterChart;
 
 import java.util.ArrayList;
 

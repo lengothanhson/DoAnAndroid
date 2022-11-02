@@ -5,15 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.ScrollView;
 
-import com.example.doan.fragment.ChartFragment;
+import com.example.doan.fragment.AbovechartFragment;
 import com.example.doan.fragment.HomeFragment;
 import com.example.doan.fragment.LibraryFragment;
 import com.example.doan.fragment.SearchFragment;
