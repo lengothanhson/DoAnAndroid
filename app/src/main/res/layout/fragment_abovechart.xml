@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center|top"
     android:padding="15dp"
-    tools:context=".AbovechartFragment">
+    tools:context=".fragment.AbovechartFragment">
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
