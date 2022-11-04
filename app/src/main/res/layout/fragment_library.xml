@@ -8,6 +8,7 @@
     tools:context=".fragment.LibraryFragment">
 
     <LinearLayout
+        android:id="@+id/tmLibrary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -51,7 +52,6 @@
         android:padding="25dp"
         android:scrollbars="none"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvAppname"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/tmLibrary"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
