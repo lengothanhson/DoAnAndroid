@@ -33,7 +33,7 @@ public class UserAdapterLibrary extends RecyclerView.Adapter<UserAdapterLibrary.
     public UserAdapterLibrary.UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View userView = inflater.inflate(R.layout.layoutitem, parent, false);
+        View userView = inflater.inflate(R.layout.layoutitemlibrary, parent, false);
         UserAdapterLibrary.UserViewHolder viewHolder = new UserViewHolder(userView);
         return viewHolder;
     }
