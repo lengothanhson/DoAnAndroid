@@ -3,10 +3,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="start"
     android:background="#DB7093"
     android:layout_marginLeft="14dp"
-    android:layout_marginRight="10dp"
     android:layout_marginTop="15dp">
 
     <TextView

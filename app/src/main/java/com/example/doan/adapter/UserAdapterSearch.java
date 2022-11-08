@@ -17,8 +17,8 @@ import com.example.doan.utils.Utils;
 import java.util.ArrayList;
 
 public class UserAdapterSearch extends RecyclerView.Adapter<UserAdapterSearch.UserViewHolder>  {
-    Context context;
     ArrayList<User> lstUser;
+    Context context;
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
