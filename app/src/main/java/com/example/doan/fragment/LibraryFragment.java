@@ -90,8 +90,8 @@ public class LibraryFragment extends Fragment {
 
     void LoadData() {
         lstUser = new ArrayList<>();
-        lstUser.add(new User("1","Người lớn chơi trung thu","Giang ơi Radio","podcast_giangoi.png"));
-        lstUser.add(new User("2","Hành trình hiểu về bản thân","Hiếu TV","podcast_hieutv.png"));
+        lstUser.add(new User("1","người lớn đi thi","Giang ơi Radio","podcast_giangoi.png"));
+        lstUser.add(new User("2","Ba câu chuyện kinh doanh","Hiếu TV","podcast_hieutv.png"));
         lstUser.add(new User("3","Biến mất trong chớp măt (Phần 1)","Hồ sơ vụ án","podcast_hosovuan.png"));
         lstUser.add(new User("4","Đừng chỉ nghĩ về lí do bắt đầu trước khi bỏ cuộc","Nguyễn Hữu Trí podcast","podcast_nguyenhuutri.png"));
         lstUser.add(new User("5","Học gì để có công việc tốt","The Present Writer","podcast_thepresentwriter.png"));
