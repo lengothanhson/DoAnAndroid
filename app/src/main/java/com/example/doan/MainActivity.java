@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.doan.fragment.AbovechartFragment;
+import com.example.doan.fragment.ChartFragment;
 import com.example.doan.fragment.HomeFragment;
 import com.example.doan.fragment.LibraryFragment;
 import com.example.doan.fragment.SearchFragment;
@@ -43,7 +44,7 @@ BottomNavigationView mnBottom;
                         LoadFragment(new SearchFragment());
                         return true;
                     case R.id.AbovechartFragment:
-                        LoadFragment(new AbovechartFragment());
+                        LoadFragment(new ChartFragment());
                         return true;
                     case R.id.mnLibrary:
                         LoadFragment(new LibraryFragment());

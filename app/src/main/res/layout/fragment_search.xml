@@ -7,20 +7,27 @@
     android:background="#2B2B2B"
     android:orientation="vertical"
     android:gravity="center|top"
+
     tools:context=".fragment.SearchFragment">
 
     <EditText
         android:id="@+id/etSearch"
         android:layout_width="380dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginTop="60dp"
+        android:layout_marginRight="9dp"
         android:background="@android:color/white"
+        android:drawableStart="@drawable/ic_baseline_search_24"
         android:hint="@string/banmunnghegi" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchList"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp" />
+        android:layout_marginBottom="70dp"
+        />
+
 
 </LinearLayout>
