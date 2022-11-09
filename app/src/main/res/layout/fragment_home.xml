@@ -42,47 +42,49 @@
             android:background="@android:color/transparent"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvKhamPhaPC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvAppName"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textColor="@color/white"
-        android:text="Tập mới nhất"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/tvKhamPhaPC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvAppName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/white"
+            android:text="Tập mới nhất"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListKP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@+id/tvKhamPhaPC"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="20dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListKP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@+id/tvKhamPhaPC"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp" />
 
-    <TextView
-        android:id="@+id/tvKhamPhaBH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rvListKP"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textColor="@color/white"
-        android:text="Bài hát mới ra mắt"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="15dp"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListKhamPhaBH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@+id/tvKhamPhaBH"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/tvKhamPhaBH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rvListKP"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/white"
+            android:text="Bài hát mới ra mắt"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListKhamPhaBH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@+id/tvKhamPhaBH"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
