@@ -102,7 +102,7 @@ public class SearchFragment extends Fragment {
             lstUser = new ArrayList<>();
             lstUser.add(new User("1","Podcasts","","podcast_giangoi.png"));
             lstUser.add(new User("2","Dành cho bạn","","tuyentapnhachiphop.png"));
-            lstUser.add(new User("3","Mới Phát Hành","","2things_diablo.png"));
+            lstUser.add(new User("3","Mới Phát Hành","","things_diablo.png"));
             lstUser.add(new User("4","Nhạc Việt","","vpopkhongthethieu.png"));
             lstUser.add(new User("5","Pop","","tophitoday.png"));
             lstUser.add(new User("6","Kpop","","tuyentapnhackpop.png"));

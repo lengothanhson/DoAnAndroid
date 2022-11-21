@@ -1,11 +1,17 @@
 package com.example.doan.users;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     String id;
     String name;
     String author;
     String avatar;
     String content;
+    public User(String id,String avatar)
+    {
+        this.avatar= avatar;
+    }
     public  User(String id, String content, String avatar)
     {
         this.id = id;
@@ -18,6 +24,7 @@ public class User {
         this.author = author;
         this.avatar = avatar;
     }
+
     public String getContent() {return content;}
     public void setContent(String content) {this.content = content;}
     public String getId() { return id; }

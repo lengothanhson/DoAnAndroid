@@ -7,8 +7,8 @@
 
 <ImageView
     android:id="@+id/imagechart"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
     android:src="@drawable/ic_launcher_background"/>
    <LinearLayout
        android:layout_width="match_parent"

@@ -16,18 +16,17 @@ import com.example.doan.fragment.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends AppCompatActivity {
-BottomNavigationView mnBottom;
-RecyclerView rcvData;
+public class AbovechartActivity extends AppCompatActivity {
+    BottomNavigationView mnBottom;
+    RecyclerView rcvData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_abovechart);
         mnBottom = findViewById(R.id.navMenu);
         mnBottom.setOnItemSelectedListener(getListener());
         mnBottom.setSelectedItemId(R.id.mnHome);
     }
-
     @NonNull
     private NavigationBarView.OnItemSelectedListener getListener() {
         return new NavigationBarView.OnItemSelectedListener() {
@@ -42,7 +41,7 @@ RecyclerView rcvData;
                         LoadFragment(new SearchFragment());
                         return true;
                     case R.id.mnbxh:
-                      LoadFragment(new ChartFragment());
+                        LoadFragment(new ChartFragment());
                         return true;
                     case R.id.mnLibrary:
                         LoadFragment(new LibraryFragment());
@@ -60,5 +59,5 @@ RecyclerView rcvData;
         fmTran.addToBackStack(null);
         fmTran.commit();
     }
-  //  private RecyclerView
+    //  private RecyclerView
 }

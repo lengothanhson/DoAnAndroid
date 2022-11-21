@@ -34,8 +34,7 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private RecyclerView rvListC;
-    private RecyclerView rvListKhamPhaBHC;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -72,6 +71,8 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
+    private RecyclerView rvListC;
+    private RecyclerView rvListKhamPhaBHC;
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

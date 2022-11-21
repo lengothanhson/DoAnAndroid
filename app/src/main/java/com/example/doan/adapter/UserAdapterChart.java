@@ -17,10 +17,10 @@ import com.example.doan.utils.Utils;
 import java.util.ArrayList;
 
 public class UserAdapterChart extends RecyclerView.Adapter<UserAdapterChart.UserViewHolder> {
- // private final UserAdapterChart.onitemclick onitemclick ;
+    private final onitemclick onitemclick;
   ArrayList<User> lstUser;
   Context context;
- // UserGridCallbackChart userGridCallBack;
+    @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context =parent.getContext();
@@ -29,28 +29,22 @@ public class UserAdapterChart extends RecyclerView.Adapter<UserAdapterChart.User
         UserViewHolder viewHolder = new UserViewHolder(userView);
         return viewHolder;
     }
+    public interface onitemclick{
+        void onItemClick(User user);
+    }
+
 
     public UserAdapterChart(ArrayList<User> lstUser, onitemclick onitemclick ) {
-     //   this.onitemclick = onitemclick;
         this.lstUser = lstUser;
- //      this.userGridCallBack = userGridCallBack;
+        this.onitemclick = onitemclick;
     }
-public interface onitemclick{
-        void onItemClick(User user);
-}
-@NonNull
+
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-User item = lstUser.get(position);
-holder.TextChart.setText(item.getContent());
-    holder.TextChart2.setText(item.getContent());
-holder.ImageChart.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
-//holder.itemView.setOnClickListener(new View.OnClickListener() {
-//    @Override
-//    public void onClick(View view) {
-//        onitemclick.onItemClick(item);
-//    }
-//});
+    User item = lstUser.get(position);
+    holder.ImageChart.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
+    holder.text1.setText(item.getName());
+    holder.text2.setText(item.getAuthor());
     }
 
     @Override
@@ -60,19 +54,15 @@ holder.ImageChart.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.ge
 
     class UserViewHolder extends RecyclerView.ViewHolder{
         ImageView ImageChart;
-        TextView TextChart;
-        TextView TextChart2;
-    //    RecyclerView linearLayout;
+        TextView text1;
+        TextView text2;
+    RecyclerView rclchart;
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
             ImageChart = itemView.findViewById(R.id.imagechart);
-    //        linearLayout=itemView.findViewById(R.id.lochart);
-            TextChart =itemView.findViewById(R.id.textchart);
-            TextChart2 =itemView.findViewById(R.id.textchart2);
+            text1 = itemView.findViewById(R.id.textchart);
+            text2 = itemView.findViewById(R.id.textchart2);
+            rclchart = itemView.findViewById(R.id.rvListChart);
         }
     }
-
-//   public interface UserGridCallbackChart{
-//      void onItemClick(String id);}
-
 }

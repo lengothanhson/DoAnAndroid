@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,8 +26,6 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class ChartFragment extends Fragment {
-    ArrayList<User> lstUser;
-    UserAdapter userAdapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +34,7 @@ public class ChartFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private RecyclerView rvListC;
+
     public ChartFragment() {
         // Required empty public constructor
     }
@@ -56,7 +55,7 @@ public class ChartFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+RecyclerView rcData;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,15 +63,15 @@ public class ChartFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
 
+    }
+    ArrayList<User> lstUser;
+    private RecyclerView rvListC;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_chart, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -83,26 +82,26 @@ public class ChartFragment extends Fragment {
         UserAdapterChart userAdapterChart = new UserAdapterChart(lstUser, new UserAdapterChart.onitemclick() {
             @Override
             public void onItemClick(User user) {
+
             }
         });
-//        StaggeredGridLayoutManager gridLayoutManager =
-//                new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-//        rvListC.setLayoutManager(gridLayoutManager);
-      rvListC.setAdapter(userAdapterChart);
-       userAdapterChart.notifyDataSetChanged();
+        rvListC.setAdapter(userAdapterChart);
+      userAdapterChart.notifyDataSetChanged();
     }
     void LoadData(){
         lstUser = new ArrayList<>();
-        lstUser.add(new User("1","Ân Tình Sang Trang","antinhsangtrang.jpg"));
-        lstUser.add(new User("2","Chạm","cham.jpg"));
-        lstUser.add(new User("3","Có Chơi Có Chịu","cochoicochiu.jpg"));
-        lstUser.add(new User("4","Không Biết","khongbiet.jpg"));
-        lstUser.add(new User("5","Quên Anh Đi","quenanhdi.jpg"));
-        lstUser.add(new User("6","SunRoof","sunroof.jpg"));
-        lstUser.add(new User("7","Thế Giới Trong Em","thegioitrongem.jpg"));
-        lstUser.add(new User("8","Tòng Phu","tongphu.jpg"));
-        lstUser.add(new User("9","Unnoly","unoly.jpg"));
-        lstUser.add(new User("10","Waiting For You","waitingforyou.jpg"));
+
+       //  public User(String id, String name, String author, String avatar)
+        lstUser.add(new User("1","An Tinh Sang Trang","An Tinh Sang Trang","antinhsangtrang.jpg"));
+        lstUser.add(new User("2","Chạm","Chạm","cham.jpg"));
+        lstUser.add(new User("3","Có Chơi Có Chịu","Có Chơi Có Chịu","cochoicochiu.jpg"));
+        lstUser.add(new User("4","Không Biết","Không Biết","khongbiet.jpg"));
+        lstUser.add(new User("5","Quen Anh Đi","Quen Anh Đi","quenanhdi.jpg"));
+        lstUser.add(new User("6","Sunroof","Sunroof","sunroof.jpg"));
+        lstUser.add(new User("7","Thế Giới Trong Em","Thế Giới Trong Em","thegioitrongem.jpg"));
+        lstUser.add(new User("8","Tòng Phu","Tòng Phu","tongphu.jpg"));
+        lstUser.add(new User("9","Unoly","Unoly","unoly.jpg"));
+        lstUser.add(new User("10","Waitting For You","Waitting For You","waitingforyou.jpg"));
 
     }
 }

@@ -1,5 +1,5 @@
 package com.example.doan.Setting;
-
+import com.example.doan.R;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;

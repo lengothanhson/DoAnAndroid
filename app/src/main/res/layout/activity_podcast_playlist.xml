@@ -1,9 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundapp"
     tools:context=".playlist.PodcastPlaylistActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="10dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+
+            android:id="@+id/imageMSPlist"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/alan_walker_faded_wallpapers" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_MSPlist"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="ALAN WK"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/text_MSPlist2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alan Waler"
+                android:textColor="#BAB7B7"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp">
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textSize="7sp"
+            android:backgroundTint="#7E7E7E"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Theo dõi"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_notifications_none_24"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_settings_24"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_more_vert_24"/>
+    </LinearLayout>
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#9A9696"
+        android:text="@string/textpodcast"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="Tập"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="Nội Dung Tương Tự"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="Tất cả các tập"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_marginLeft="200dp"
+            android:backgroundTint="#7E7E7E"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Sắp xếp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_PodCast"
+        android:layout_width="wrap_content"
+        android:layout_height="390dp"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/mnbottom"
+        android:background="#DB7093"/>
+</LinearLayout>
