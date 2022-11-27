@@ -13,26 +13,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.doan.R;
 import com.example.doan.users.MSPList;
 import com.example.doan.users.PodCast;
+import com.example.doan.users.User;
 import com.example.doan.utils.Utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterPodCast extends RecyclerView.Adapter<AdapterPodCast.PCastViewHolder> {
-  List<PodCast> mPodcast;
+    private final onitemclick onitemclick;
+  ArrayList<PodCast> mPodcast;
   Context context;
-
-    public AdapterPodCast(Context context) {
-        this.context = context;
+    public interface onitemclick{
+        void onItemClick(User user);
     }
-    public void setDataPCast(List<PodCast> list){
-        this.mPodcast=list;
-        notifyDataSetChanged();
+    public AdapterPodCast(ArrayList<PodCast> mPodcast, onitemclick onitemclick) {
+      this.mPodcast=mPodcast;
+        this.onitemclick = onitemclick;
     }
     @NonNull
     @Override
     public PCastViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layoutpodcast,parent,false);
-        return new PCastViewHolder(view);
+        context =parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View userView = inflater.inflate(R.layout.layoutpodcast,parent,false);
+        PCastViewHolder viewHolder = new PCastViewHolder(userView);
+        return viewHolder;
     }
 
     @Override

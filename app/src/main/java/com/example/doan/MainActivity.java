@@ -9,10 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.doan.fragment.ChartFragment;
 import com.example.doan.fragment.HomeFragment;
 import com.example.doan.fragment.LibraryFragment;
 import com.example.doan.fragment.SearchFragment;
+import com.example.doan.playlist.MusicPlayListFragment;
+import com.example.doan.playlist.PodCastPlayFragment;
+import com.example.doan.podcast.InformationPodcastFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -42,7 +44,7 @@ RecyclerView rcvData;
                         LoadFragment(new SearchFragment());
                         return true;
                     case R.id.mnbxh:
-                      LoadFragment(new ChartFragment());
+                      LoadFragment(new InformationPodcastFragment());
                         return true;
                     case R.id.mnLibrary:
                         LoadFragment(new LibraryFragment());

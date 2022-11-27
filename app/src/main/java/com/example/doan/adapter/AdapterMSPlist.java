@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,28 +14,31 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.doan.R;
 import com.example.doan.users.MSPList;
+import com.example.doan.users.User;
 import com.example.doan.utils.Utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterMSPlist extends RecyclerView.Adapter<AdapterMSPlist.MSPlistViewHolder>{
-    List<MSPList> mMSPlist;
+    private final onitemclick onitemclick;
+    ArrayList<MSPList> mMSPlist;
     Context mContext;
-    public AdapterMSPlist(Context mContext) {
-        this.mContext = mContext;
+    public interface onitemclick{
+        void onItemClick(User user);
     }
-
-
-
-    public void setDataMSPL(List<MSPList> list){
-        this.mMSPlist=list;
-        notifyDataSetChanged();
+    public AdapterMSPlist( ArrayList<MSPList> mMSPlist, onitemclick onitemclick ) {
+        this.mMSPlist = mMSPlist;
+        this.onitemclick = onitemclick;
     }
     @NonNull
     @Override
     public MSPlistViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-      View view = LayoutInflater.from (parent.getContext()).inflate(R.layout.layoutmusicplaylist,parent,false);
-        return new  MSPlistViewHolder(view);
+        mContext =parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(mContext);
+        View userView = inflater.inflate(R.layout.layoutmusicplaylist,parent,false);
+        MSPlistViewHolder viewHolder = new MSPlistViewHolder(userView);
+        return viewHolder;
     }
     @Override
     public void onBindViewHolder(@NonNull MSPlistViewHolder holder, int position) {
@@ -46,15 +50,8 @@ public class AdapterMSPlist extends RecyclerView.Adapter<AdapterMSPlist.MSPlistV
     holder.textMSPlist2.setText(mspList.getText2());
     }
 
-
-
     @Override
-    public int getItemCount() {
-       if(mMSPlist!= null)
-       {return mMSPlist.size();}
-        return 0;
-    }
-
+    public int getItemCount() {return mMSPlist.size();}
     class MSPlistViewHolder extends RecyclerView.ViewHolder{
         private ImageView imageMSPlist;
         private TextView textMSPlist;
