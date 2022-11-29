@@ -26,14 +26,16 @@
             android:layout_marginLeft="300dp"
             android:src="@drawable/ic_baseline_more_vert_24"/>
     </LinearLayout>
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
-        android:scaleType="centerCrop"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/alan_walker_faded_wallpapers" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
