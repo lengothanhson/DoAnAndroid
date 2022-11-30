@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +19,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.example.doan.R;
+import com.example.doan.play.PlaySoundFragment;
+import com.example.doan.searchtype.SearchTypeKpopFragment;
 import com.example.doan.users.User;
 import com.example.doan.adapter.UserAdapterSearch;
 
@@ -87,13 +91,14 @@ public class SearchFragment extends Fragment {
         rvSearchListC = view.findViewById(R.id.rvSearchList);
         rvSearchListC.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
         rvSearchListC.setHasFixedSize(true);
-        UserAdapterSearch userAdapterSearch = new UserAdapterSearch(lstUser);
-      StaggeredGridLayoutManager gridLayoutManager =
-           new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        UserAdapterSearch userAdapterSearch = new UserAdapterSearch(lstUser, new UserAdapterSearch.onitemclick() {
+            @Override
+            public void onItemClick(User user) {
+                LoadFragment(new SearchTypeKpopFragment());
+            }
+        });
+        StaggeredGridLayoutManager gridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         rvSearchListC.setLayoutManager(gridLayoutManager);
-    //    GridLayoutManager gridLayoutManager= new GridLayoutManager(getContext(),2);
-    //    gridLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-       //  LinearLayoutManager linearLayoutManager= new LinearLayoutManager(getContext());
         rvSearchListC.setAdapter(userAdapterSearch);
     userAdapterSearch.notifyDataSetChanged();
     }
@@ -109,5 +114,13 @@ public class SearchFragment extends Fragment {
             lstUser.add(new User("7","Nhạc Việt","","vpopkhongthethieu.png"));
             lstUser.add(new User("8","Pop","","tophitoday.png"));
 
+    }
+
+    void LoadFragment (Fragment fmNew)
+    {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(android.R.id.content, fmNew);
+        fragmentTransaction.commit();
     }
 }

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/backgroundapp"
-
     tools:context=".podcast.InformationPodcastFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -34,7 +33,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/alan_walker_faded_wallpapers" />
+        android:src="@drawable/alan_walker_faded_wallpapers"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -43,17 +42,22 @@
         android:textSize="40sp"
         android:textColor="@color/white"
         android:gravity="center|left"
-        android:text="      Đi Qua Những Khoảng Tối Cuộc Đời"/>
+        android:text="Đi Qua Những Khoảng Tối Cuộc Đời"
+        android:layout_marginLeft="10dp"/>
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:gravity="center|left"
         android:text="HIEU.TV"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"/>
+
     <LinearLayout
         android:gravity="center|left"
         android:layout_width="match_parent"

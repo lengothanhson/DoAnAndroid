@@ -22,7 +22,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         private final UserAdapter.onitemclick onitemclick;
         ArrayList<User> lstUser;
         Context context;
-     UserGridCallBack userGridCallBack;
+        UserGridCallBack userGridCallBack;
 
         public interface onitemclick{
             void onItemClick(User user);
@@ -68,7 +68,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             LinearLayout linearLayout;
             public UserViewHolder(@NonNull View itemView) {
                  super(itemView);
-                imAvatar  = itemView.findViewById(R.id.ivAvatar);
+                 imAvatar  = itemView.findViewById(R.id.ivAvatar);
                 tvNameC = itemView.findViewById(R.id.tvName);
                 tvAuthorC = itemView.findViewById(R.id.tvAuthor);
                 linearLayout = itemView.findViewById(R.id.btItem);
