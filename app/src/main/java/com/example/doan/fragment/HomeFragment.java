@@ -5,14 +5,24 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.doan.R;
+import com.example.doan.Setting.SettingFragment;
+import com.example.doan.Setting.UserInformationFragment;
+import com.example.doan.play.PlaySoundFragment;
+import com.example.doan.playlist.MusicPlayListFragment;
+import com.example.doan.playlist.PodCastPlayFragment;
+import com.example.doan.podcast.InformationPodcastFragment;
 import com.example.doan.users.User;
 import com.example.doan.adapter.UserAdapter;
 import com.example.doan.adapter.UserAdapter1;
@@ -27,6 +37,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     ArrayList<User> lstUser;
     UserAdapter userAdapter;
+    ImageButton ibSetting;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -76,6 +87,14 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ibSetting = view.findViewById(R.id.ibSetting);
+        ibSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoadFragment(new UserInformationFragment());
+            }
+        });
+
         LoadData();
         rvListC = view.findViewById(R.id.rvListKP);
         rvListC.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL,false));
@@ -83,6 +102,7 @@ public class HomeFragment extends Fragment {
         UserAdapter userAdapter = new UserAdapter(lstUser, new UserAdapter.onitemclick() {
             @Override
             public void onItemClick(User user) {
+                LoadFragment(new InformationPodcastFragment());
             }
         });
         rvListC.setAdapter(userAdapter);
@@ -94,11 +114,14 @@ public class HomeFragment extends Fragment {
         UserAdapter1 userAdapter1 = new UserAdapter1(lstUser, new UserAdapter1.onitemclick() {
             @Override
             public void onItemClick(User user) {
+                LoadFragment(new MusicPlayListFragment());
             }
         });
         rvListKhamPhaBHC.setAdapter(userAdapter1);
         userAdapter1.notifyDataSetChanged();
     }
+
+
     void LoadData() {
         lstUser = new ArrayList<>();
         lstUser.add(new User("1","người lớn chơi trung thu","Giang ơi Radio","podcast_giangoi.png"));
@@ -107,6 +130,7 @@ public class HomeFragment extends Fragment {
         lstUser.add(new User("4","Đừng chỉ nghĩ về lí do bắt đầu trước khi bỏ cuộc","Nguyễn Hữu Trí podcast","podcast_nguyenhuutri.png"));
         lstUser.add(new User("5","Học gì để có công việc tốt","The Present Writer","podcast_thepresentwriter.png"));
     }
+
     void LoadData1() {
         lstUser = new ArrayList<>();
         lstUser.add(new User("1", "2 things", "Don Diablo", "2things_diablo.png"));
@@ -114,5 +138,13 @@ public class HomeFragment extends Fragment {
         lstUser.add(new User("3", "Loser", "Charlie Puth", "loser_charlieputh.png"));
         lstUser.add(new User("4", "Viotlet", "Killa", "viotlet_killa.png"));
         lstUser.add(new User("5", "Ambush", "Mike William", "ambush_mikewilliam.png"));
+    }
+
+    void LoadFragment (Fragment fmNew)
+    {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(android.R.id.content, fmNew);
+        fragmentTransaction.commit();
     }
 }

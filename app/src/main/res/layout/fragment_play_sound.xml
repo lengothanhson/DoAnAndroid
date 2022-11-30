@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".play.PlaySoundFragment"
+    android:background="#2B2B2B">
+
+    <ImageButton
+        android:id="@+id/PSBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/PSMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_more_vert_24"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivPSound"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:src="@drawable/anhtudonhungcodon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="110dp"/>
+
+    <TextView
+        android:id="@+id/tvPSName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPSound"
+        android:text="Anh tự do nhưng cô đơn"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/tvPSAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvPSName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Trung Quân Idol"
+        android:textColor="#C1C1C1"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"/>
+
+    <SeekBar
+        android:id="@+id/sbPSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvPSAuthor"
+        android:layout_marginTop="12dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sbPSound"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/PSFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_favorite_border_24"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dp"/>
+
+        <ImageButton
+            android:id="@+id/PSPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_skip_previous_24"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="15dp"/>
+
+        <ImageButton
+            android:id="@+id/PSPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_play_circle_24"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="15dp"/>
+
+        <ImageButton
+            android:id="@+id/PSNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_skip_next_24"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dp"/>
+
+        <ImageButton
+            android:id="@+id/PSBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_block_24"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

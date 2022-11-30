@@ -5,12 +5,14 @@ public class PodCast {
     String Avatar;
     String title;
     String content;
+
     public String getId() {
         return id;
     }
     public void setId(String id) {
         this.id = id;
     }
+
     public PodCast(String id,String avatar, String title, String content) {
         this.Avatar = avatar;
         this.title = title;
@@ -24,12 +26,14 @@ public class PodCast {
     public void setAvatar(String avatar) {
         Avatar = avatar;
     }
+
     public String getTitle() {
         return title;
     }
     public void setTitle(String title) {
         this.title = title;
     }
+
     public String getContent() {
         return content;
     }
