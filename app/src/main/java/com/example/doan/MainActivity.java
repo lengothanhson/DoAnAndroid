@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.doan.Setting.SettingFragment;
+import com.example.doan.Setting.UserInformationFragment;
 import com.example.doan.fragment.ChartFragment;
 import com.example.doan.fragment.HomeFragment;
 import com.example.doan.fragment.LibraryFragment;
@@ -44,7 +46,7 @@ RecyclerView rcvData;
                         LoadFragment(new SearchFragment());
                         return true;
                     case R.id.mnbxh:
-                      LoadFragment(new ChartFragment());
+                      LoadFragment(new UserInformationFragment());
                         return true;
                     case R.id.mnLibrary:
                         LoadFragment(new LibraryFragment());
