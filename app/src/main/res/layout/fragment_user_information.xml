@@ -51,17 +51,18 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:gravity="center"
-        android:text="Tên người dùng"
+        android:text="KieuBao"
         android:textColor="@color/white"
         android:textSize="35sp" />
-<LinearLayout
+
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <TextView
         android:layout_width="wrap_content"
         android:layout_weight="1"
-        android:layout_height="70dp"
+        android:layout_height="30dp"
        android:gravity="center"
         android:text="1"
         android:textColor="@color/white"
@@ -69,7 +70,7 @@
     <TextView
         android:layout_weight="1"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="40"
         android:textColor="@color/white"
@@ -81,14 +82,14 @@
         android:layout_height="wrap_content">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
         android:text="Người theo dõi"
         android:gravity="center"
         android:textColor="@color/white" />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
         android:gravity="center"
         android:text="Đang theo dõi"

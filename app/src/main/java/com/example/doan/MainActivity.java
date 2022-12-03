@@ -20,6 +20,7 @@ import com.example.doan.playlist.PodCastPlayFragment;
 import com.example.doan.podcast.InformationPodcastFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 BottomNavigationView mnBottom;
@@ -46,7 +47,7 @@ RecyclerView rcvData;
                         LoadFragment(new SearchFragment());
                         return true;
                     case R.id.mnbxh:
-                      LoadFragment(new UserInformationFragment());
+                      LoadFragment(new ChartFragment());
                         return true;
                     case R.id.mnLibrary:
                         LoadFragment(new LibraryFragment());

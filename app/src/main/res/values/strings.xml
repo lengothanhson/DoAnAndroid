@@ -5,6 +5,13 @@
     <!-- text fragment chart -->
     <string name="banmunnghegi">Bạn muốn nghe gì ?</string>
 
+    <string name="create_account"><font color="#00ff00">text</font></string>
+    <string name="email">Email</string>
+    <string name="password">Mật Khẩu</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="username">Tên Người Dùng</string>
+    <string name="register">Đăng Ký</string>
+    <string name="back_to_login">Quay lại</string>
     <!-- text fragment chart -->
     <string name="content">No No No No No No No No No No No No No No No No No No No No No No No No No
         No No No No No No No No No No No No No No No No No No No No No No No No No

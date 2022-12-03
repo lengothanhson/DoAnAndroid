@@ -10,4 +10,7 @@
     <color name="mautimnha">#714755</color>
 <color name="mauchudao">#DB7093</color>
     <color name="backgroundapp">#2B2B2B</color>
+    <color name="colorPrimary">#607d8b</color>
+    <color name="colorPrimaryDark">#455a64</color>
+    <color name="colorAccent">#0c0099</color>
 </resources>

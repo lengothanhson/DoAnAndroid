@@ -20,6 +20,9 @@ public class UserAdapterChart extends RecyclerView.Adapter<UserAdapterChart.User
     private final onitemclick onitemclick;
   ArrayList<User> lstUser;
   Context context;
+  public interface UserCallback{
+
+  }
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
