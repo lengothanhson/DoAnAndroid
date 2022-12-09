@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.doan.R;
 import com.example.doan.users.User;
-import com.example.doan.utils.Utils;
+import com.example.doan.utils.Utilschart;
 
 import java.util.ArrayList;
 
@@ -49,7 +49,7 @@ public class UserAdapter1 extends RecyclerView.Adapter<UserAdapter1.UserViewHold
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         User item = lstUser.get(position);
 
-        holder.imAvatar.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
+        holder.imAvatar.setImageBitmap(Utilschart.convertToBitmapFromAssets(context,item.getAvatar()));
         holder.tvNameC.setText(item.getName());
         holder.tvAuthorC.setText(item.getAuthor());
         holder.itemView.setOnClickListener(new View.OnClickListener() {

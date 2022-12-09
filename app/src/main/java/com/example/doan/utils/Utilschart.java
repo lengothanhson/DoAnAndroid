@@ -8,7 +8,13 @@ import android.graphics.BitmapFactory;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Utils {
+public class Utilschart {
+    public static final String DATABASE_NAME = "db-user";
+    public static final String TABLE_USER = "user";
+    public static final String COLUMN_USER_ID = "id";
+    public static final String COLUMN_USER_NAME = "name";
+    public static final String COLUMN_USER_AVATAR = "avatar";
+    public static final String COLUM_USER_TITLE = "title";
     public static Bitmap convertToBitmapFromAssets(Context context, String nameImage)
     {
         AssetManager assetManager = context.getAssets();

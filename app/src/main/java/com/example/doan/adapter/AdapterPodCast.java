@@ -11,13 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.doan.R;
-import com.example.doan.users.MSPList;
 import com.example.doan.users.PodCast;
 import com.example.doan.users.User;
-import com.example.doan.utils.Utils;
+import com.example.doan.utils.Utilschart;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AdapterPodCast extends RecyclerView.Adapter<AdapterPodCast.PCastViewHolder> {
     private final onitemclick onitemclick;
@@ -47,7 +45,7 @@ public class AdapterPodCast extends RecyclerView.Adapter<AdapterPodCast.PCastVie
     {
         return;
     }
-    holder.imagepodcast.setImageBitmap(Utils.convertToBitmapFromAssets(context,podCast.getAvatar()));
+    holder.imagepodcast.setImageBitmap(Utilschart.convertToBitmapFromAssets(context,podCast.getAvatar()));
     holder.tvpodcast1.setText(podCast.getTitle());
     holder.tvpodcast2.setText(podCast.getContent());
     }

@@ -12,7 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.doan.R;
 import com.example.doan.users.User;
-import com.example.doan.utils.Utils;
+import com.example.doan.users.UsersChart;
+import com.example.doan.utils.Utilschart;
 
 import java.util.ArrayList;
 
@@ -20,9 +21,13 @@ public class UserAdapterChart extends RecyclerView.Adapter<UserAdapterChart.User
     private final onitemclick onitemclick;
   ArrayList<User> lstUser;
   Context context;
-  public interface UserCallback{
-
-  }
+  UserCallback userCallback;
+public interface UserCallback{
+    void onItemEditClicked(UsersChart us, int position);
+}
+public void setCallback(UserCallback callback){
+    this.userCallback = callback;
+}
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,9 +50,10 @@ public class UserAdapterChart extends RecyclerView.Adapter<UserAdapterChart.User
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
     User item = lstUser.get(position);
-    holder.ImageChart.setImageBitmap(Utils.convertToBitmapFromAssets(context,item.getAvatar()));
+    holder.ImageChart.setImageBitmap(Utilschart.convertToBitmapFromAssets(context,item.getAvatar()));
     holder.text1.setText(item.getName());
     holder.text2.setText(item.getAuthor());
+    holder.rank.setText(item.getId());
     }
 
     @Override
@@ -59,6 +65,7 @@ public class UserAdapterChart extends RecyclerView.Adapter<UserAdapterChart.User
         ImageView ImageChart;
         TextView text1;
         TextView text2;
+        TextView rank;
     RecyclerView rclchart;
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -66,6 +73,7 @@ public class UserAdapterChart extends RecyclerView.Adapter<UserAdapterChart.User
             text1 = itemView.findViewById(R.id.textchart);
             text2 = itemView.findViewById(R.id.textchart2);
             rclchart = itemView.findViewById(R.id.rvListChart);
+            rank = itemView.findViewById(R.id.rank);
         }
     }
 }

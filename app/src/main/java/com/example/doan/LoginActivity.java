@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
         sqliteHelper = new sqliteHelper(this);
         initCreateAccountTextView();
         initViews();
-
         //set click event of login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,12 +59,11 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         //User Logged in Successfully Launch You home screen activity
                         startActivity(intent);
+
                         finish();
                     } else {
-
                         //User Logged in Failed
                         Snackbar.make(buttonLogin, "Không thể kết nối , xin nhập lại", Snackbar.LENGTH_LONG).show();
-
                     }
                 }
             }

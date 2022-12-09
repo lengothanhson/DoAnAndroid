@@ -4,21 +4,17 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.doan.R;
 import com.example.doan.users.MSPList;
 import com.example.doan.users.User;
-import com.example.doan.utils.Utils;
+import com.example.doan.utils.Utilschart;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AdapterMSPlist extends RecyclerView.Adapter<AdapterMSPlist.MSPlistViewHolder>{
     private final onitemclick onitemclick;
@@ -45,7 +41,7 @@ public class AdapterMSPlist extends RecyclerView.Adapter<AdapterMSPlist.MSPlistV
     MSPList mspList = mMSPlist.get(position);
     if(mspList == null)
     { return ;}
-    holder.imageMSPlist.setImageBitmap(Utils.convertToBitmapFromAssets(mContext,mspList.getAvatar()));
+    holder.imageMSPlist.setImageBitmap(Utilschart.convertToBitmapFromAssets(mContext,mspList.getAvatar()));
     holder.textMSPlist.setText(mspList.getText1());
     holder.textMSPlist2.setText(mspList.getText2());
     }

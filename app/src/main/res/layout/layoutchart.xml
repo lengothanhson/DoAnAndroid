@@ -4,14 +4,21 @@
     android:layout_height="100dp"
     android:id="@+id/lochart"
     android:padding="10dp">
-
+<TextView
+    android:layout_width="50dp"
+    android:layout_height="80dp"
+    android:textSize="20sp"
+    android:textColor="#DCC2C2"
+    android:text="Hang"
+    android:id="@+id/rank"
+    android:gravity="center|left"/>
 <ImageView
     android:id="@+id/imagechart"
     android:layout_width="80dp"
     android:layout_height="80dp"
     android:src="@drawable/ic_launcher_background"/>
    <LinearLayout
-       android:layout_width="270dp"
+       android:layout_width="190dp"
        android:layout_height="match_parent"
        android:orientation="vertical"
        android:layout_marginTop="10dp"

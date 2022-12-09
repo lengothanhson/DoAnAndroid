@@ -92,9 +92,7 @@ RecyclerView rcData;
         lstUser = new ArrayList<>();
 
        //  public User(String id, String name, String author, String avatar)
-        lstUser.add(new User("1","An Tinh Sang Trang","An Tinh Sang Trang","antinhsangtrang.jpg"));
-        lstUser.add(new User("2","Chạm","Chạm","cham.jpg"));
-        lstUser.add(new User("3","Có Chơi Có Chịu","Có Chơi Có Chịu","cochoicochiu.jpg"));
+
         lstUser.add(new User("4","Không Biết","Không Biết","khongbiet.jpg"));
         lstUser.add(new User("5","Quen Anh Đi","Quen Anh Đi","quenanhdi.jpg"));
         lstUser.add(new User("6","Sunroof","Sunroof","sunroof.jpg"));
@@ -102,6 +100,8 @@ RecyclerView rcData;
         lstUser.add(new User("8","Tòng Phu","Tòng Phu","tongphu.jpg"));
         lstUser.add(new User("9","Unoly","Unoly","unoly.jpg"));
         lstUser.add(new User("10","Waitting For You","Waitting For You","waitingforyou.jpg"));
-
+        lstUser.add(new User("11","An Tinh Sang Trang","An Tinh Sang Trang","antinhsangtrang.jpg"));
+        lstUser.add(new User("12","Chạm","Chạm","cham.jpg"));
+        lstUser.add(new User("13","Có Chơi Có Chịu","Có Chơi Có Chịu","cochoicochiu.jpg"));
     }
 }

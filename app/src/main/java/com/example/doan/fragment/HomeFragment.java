@@ -26,6 +26,7 @@ import com.example.doan.podcast.InformationPodcastFragment;
 import com.example.doan.users.User;
 import com.example.doan.adapter.UserAdapter;
 import com.example.doan.adapter.UserAdapter1;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -81,6 +82,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+
     }
     private RecyclerView rvListC;
     private RecyclerView rvListKhamPhaBHC;
