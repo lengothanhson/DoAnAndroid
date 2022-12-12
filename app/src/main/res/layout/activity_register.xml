@@ -14,17 +14,14 @@
         android:layout_marginRight="16dp"
         android:orientation="vertical">
 
-        <TextView
+        <ImageView
+
             android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
-            android:background="@color/white"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:text="Tạo Tài Khoản" />
+            android:src="@drawable/nhac" />
 
         <com.google.android.material.textfield.TextInputLayout
             app:errorEnabled="true"
