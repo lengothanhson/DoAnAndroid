@@ -14,19 +14,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import com.example.doan.R;
-import com.example.doan.Setting.SettingFragment;
 import com.example.doan.Setting.UserInformationFragment;
-import com.example.doan.play.PlaySoundFragment;
 import com.example.doan.playlist.MusicPlayListFragment;
-import com.example.doan.playlist.PodCastPlayFragment;
 import com.example.doan.podcast.InformationPodcastFragment;
 import com.example.doan.users.User;
 import com.example.doan.adapter.UserAdapter;
 import com.example.doan.adapter.UserAdapter1;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 

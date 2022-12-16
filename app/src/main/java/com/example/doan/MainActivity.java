@@ -15,6 +15,7 @@ import com.example.doan.fragment.ChartFragment;
 import com.example.doan.fragment.HomeFragment;
 import com.example.doan.fragment.LibraryFragment;
 import com.example.doan.fragment.SearchFragment;
+import com.example.doan.play.PlaySoundFrangment;
 import com.example.doan.playlist.MusicPlayListFragment;
 import com.example.doan.playlist.PodCastPlayFragment;
 import com.example.doan.podcast.InformationPodcastFragment;
@@ -47,7 +48,7 @@ RecyclerView rcvData;
                         LoadFragment(new SearchFragment());
                         return true;
                     case R.id.mnbxh:
-                      LoadFragment(new ChartFragment());
+                      LoadFragment(new PlaySoundFrangment());
                         return true;
                     case R.id.mnLibrary:
                         LoadFragment(new LibraryFragment());
