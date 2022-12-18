@@ -30,18 +30,12 @@ play =(ImageButton) rootView.findViewById(R.id.PSPlay);
 pause = (ImageButton) rootView.findViewById(R.id.PSBlock);
 seekBar = (SeekBar) rootView.findViewById(R.id.sbPSound);
  sound = MediaPlayer.create(getActivity(),R.raw.song_2);
+
 handler = new Handler();
 sound.setAudioStreamType(AudioManager.STREAM_MUSIC);
-
-sound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-    @Override
-    public void onPrepared(MediaPlayer mediaPlayer) {
         seekBar.setMax(sound.getDuration());
+sound.start();
         playCycle();
-        sound.start();
-    }
-});
-
 seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -71,6 +65,7 @@ play.setOnClickListener(new View.OnClickListener() {
         }else{
         sound.setLooping(true);
         sound.start();
+            playCycle();
     }}
 });
 pause.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +86,7 @@ pause.setOnClickListener(new View.OnClickListener() {
                     playCycle();
                 }
             };
-            handler.postDelayed(runnable,1000);
+            handler.postDelayed(runnable,100);
         }
     }
 
